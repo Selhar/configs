@@ -1,1 +1,1 @@
-mv Xresources ~/.Xresources
+cp Xresources ~/.Xresources
