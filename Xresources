@@ -1,0 +1,55 @@
+
+! --- special colors ---
+
+*background: #131113
+*foreground: #e7e7e7
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! --- standard colors ---
+
+! black
+*color0: #151515
+! bright_black
+*color8: #373737
+! red
+*color1: #515e6f
+! bright_red
+*color9: #bbc8d8
+! green
+*color2: #515e6f
+! bright_green
+*color10: #bbc8d8
+! yellow
+*color3: #515e6f
+! bright_yellow
+*color11: #bbc8d8
+! blue
+*color4: #515e6f
+! bright_blue
+*color12: #bbc8d8
+! magenta
+*color5: #515e6f
+! bright_magenta
+*color13: #bbc8d8
+! cyan
+*color6: #515e6f
+! bright_cyan
+*color14: #bbc8d8
+! white
+*color7: #808080
+! bright_white
+*color15: #e7e7e7
+
+! --- other settings ---
+
+*highlightColor: #3D4452
+*highlightTextColor: #F2F2F2
+*cursorColor: #e7e7e7
+*pointerColor: #515e6f
+*pointerColor2: #e7e7e7
+*colorBD: #e7e7e7
+*colorUL: #95A4B2
+*underlineColor: #566776
