@@ -1,0 +1,1 @@
+mv Xresources ~/.Xresources
