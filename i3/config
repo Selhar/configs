@@ -16,7 +16,7 @@ bindsym $mod+d exec dmenu_run
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
+bindsym $mod+o focus up
 bindsym $mod+ccedilla focus right
 
 # alternatively, you can use the cursor keys:
@@ -145,10 +145,10 @@ assign [class="Foxit Reader"] $w3
 assign [class="Steam"] $w4
 
 #startup execution
-exec chromium-browser
+exec chromium
 exec FoxitReader
 exec steam
-exec Okular
+exec okular
 exec deluge
 exec code
 exec feh --bg-scale ~/Pictures/wallpaper/wpp.png
@@ -183,4 +183,6 @@ bar {
 		urgent_workspace   	$bg-urgent 		$bg-urgent 			$text
 	}
 }
+#lock screen
+bindsym $mod+l exec i3lock -i ~/Pictures/wallpaper/wpp.png
 
