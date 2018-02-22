@@ -1,55 +1,72 @@
+! --- Font ---
+URxvt.font: 		xft:monospace:size=12
 
-! --- special colors ---
+! --- Scrollbar
+URxvt.scrollStyle:	rxvt
+URxvt.scrollBar:       	false
 
-*background: #131113
-*foreground: #e7e7e7
+! --- Misc ---
+URxvt.loginShell:	true
+URxvt.fading:		50
+URxvt.internalBorder:	0
+URxvt.externalBorder:	0
+URxvt.depth:		32
+URxvt.pointerBlank:	true
 
-! Scrollbar
-URxvt.scrollStyle:          rxvt
-URxvt.scrollBar:            false
+! --- Extensions ---
+URxvt.perl-ext:			default,matcher,resize-font,keyboard-select,clipboard
+URxvt.url-launcher: 		/usr/bin/firefox
+URxvt.iso14755: 		false
+URxvt.iso14755_52: 		false
+URxvt.matcher.button:		1
+URxvt.matcher.rend.0: 		Uline Bold fg5
+URxvt.keysym.M-Escape: 		perl:keyboard-select:activate
+URxvt.keysym.M-s: 		perl:keyboard-select:search
+URxvt.keysym.Shift-Control-V: 	perl:clipboard:paste
+URxvt.keysym.Shift-Control-C: 	perl:clipboard:copy
 
 ! --- standard colors ---
 
-! black
-*color0: #151515
-! bright_black
-*color8: #373737
-! red
-*color1: #515e6f
-! bright_red
-*color9: #bbc8d8
-! green
-*color2: #515e6f
-! bright_green
-*color10: #bbc8d8
-! yellow
-*color3: #515e6f
-! bright_yellow
-*color11: #bbc8d8
-! blue
-*color4: #515e6f
-! bright_blue
-*color12: #bbc8d8
-! magenta
-*color5: #515e6f
-! bright_magenta
-*color13: #bbc8d8
-! cyan
-*color6: #515e6f
-! bright_cyan
-*color14: #bbc8d8
-! white
-*color7: #808080
-! bright_white
-*color15: #e7e7e7
-
-! --- other settings ---
-
-*highlightColor: #3D4452
-*highlightTextColor: #F2F2F2
-*cursorColor: #e7e7e7
-*pointerColor: #515e6f
-*pointerColor2: #e7e7e7
-*colorBD: #e7e7e7
-*colorUL: #95A4B2
-*underlineColor: #566776
+! Generated with :
+! XRDB2Xreources.py
+!
+*.foreground:  #d0d0d0
+*.background:  #212121
+*.cursorColor: #d0d0d0
+!
+! Black
+*.color0:      #151515
+*.color8:      #505050
+!
+! Red
+*.color1:      #ac4142
+*.color9:      #ac4142
+!
+! Green
+*.color2:      #7e8e50
+*.color10:     #7e8e50
+!
+! Yellow
+*.color3:      #e5b567
+*.color11:     #e5b567
+!
+! Blue
+*.color4:      #6c99bb
+*.color12:     #6c99bb
+!
+! Magenta
+*.color5:      #9f4e85
+*.color13:     #9f4e85
+!
+! Cyan
+*.color6:      #7dd6cf
+*.color14:     #7dd6cf
+!
+! White
+*.color7:      #d0d0d0
+*.color15:     #f5f5f5
+!
+! Bold, Italic, Underline
+*.colorBD:     #d0d0d0
+!*.colorIT:
+!*.colorUL:
