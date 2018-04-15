@@ -175,6 +175,7 @@ exec ./Documents/Telegram/Telegram
 exec lutris
 exec calibre
 exec deluge
+exec redshift
 exec_always feh --bg-scale ~/Pictures/wallpaper.png
 
 #misc config

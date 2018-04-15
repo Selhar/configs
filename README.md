@@ -21,4 +21,4 @@ sudo make install
 
 # packages
 sudo dnf copr enable daniruiz/flat-remix  
-sudo dnf install thunar lxappearance arc-theme flat-remix  
+sudo dnf install thunar lxappearance arc-theme flat-remix ffmpegthumbnailer
