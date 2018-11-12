@@ -1,3 +1,6 @@
+git config --global user.name ""
+git config --global user.email ""
+
 mkdir ~/.fonts  
 cp ./fonts/* ~/.fonts  
 cp ./i3/.i3blocks.conf ~/.i3blocks.conf  
