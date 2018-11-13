@@ -22,6 +22,8 @@ theme: arc-dark
 font: inconsolata  
 icon theme: flat-remix  
 
+`mkdir ~/.config/redshift`  
+`cp ./redshift.conf ~/.config/redshift/redshift.conf`  
 `cp misc/wallpaper.png ~/Pictures`  
 `mkdir ~/.fonts`  
 `cp ./fonts/* ~/.fonts`  
