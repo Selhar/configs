@@ -25,10 +25,10 @@ icon theme: flat-remix
 `cp misc/wallpaper.png ~/Pictures`  
 `mkdir ~/.fonts`  
 `cp ./fonts/* ~/.fonts`  
-`cp i3/i3blocks.conf ~/i3blocks.conf`  
+`cp i3/i3blocks.conf ~/.i3blocks.conf`  
 `mkdir ~/.i3-blocks`  
 `mkdir ~/.i3-blocks/blocks`  
-`cp i3/blocks/* ~/.i3-blocks/blocks`  
+`cp i3/blocks/* ~/.i3blocks/blocks`  
 `cp i3/config /home/selhar/.config/i3/config`  
 `cp ./Xresources ~/.Xresources`  
 `cp ./urxvt-extensions/* /usr/lib64/urxvt/perl/`  
