@@ -1,13 +1,13 @@
 
 git config --global user.name ""  
 git config --global user.email ""
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm  
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-steam.repo  
 sudo dnf copr enable daniruiz/flat-remix  
 sudo dnf install thunar lxappearance arc-theme flat-remix ffmpegthumbnailer simple-mtpfs gvfs-mtp libmtp xclip i3 autoconf automake make ffmpeg-libs  
 *switch to i3*  
   
-sudo dnf install deluge htop mpv cmus redshift steam
+sudo dnf install deluge htop mpv cmus redshift steam  
 
 # i3blocks
 git clone https://github.com/vivien/i3blocks  
