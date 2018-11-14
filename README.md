@@ -5,7 +5,7 @@
 `dnf config-manager --add-repo=https://negativo17.org/repos/fedora-steam.repo`  
 `sudo dnf copr enable daniruiz/flat-remix`  
 `sudo dnf install thunar lxappearance arc-theme flat-remix ffmpegthumbnailer simple-mtpfs gvfs-mtp libmtp xclip i3 autoconf automake make ffmpeg-libs scrot`  
-`sudo dnf install deluge htop mpv cmus redshift steam wine urxvt calibre feh`  
+`sudo dnf install deluge htop mpv cmus redshift steam wine urxvt calibre feh i3lock`  
 *switch to i3*  
   
 
