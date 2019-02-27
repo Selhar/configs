@@ -1,5 +1,0 @@
-#!/bin/bash
-
-tasks=$(wc -l ~/.tasks)
-set -- $tasks
-echo "$1"
