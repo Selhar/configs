@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cp ./fonts/* ~/usr/share/fonts
-cp ~/Xresources ~/.Xresources
+cp -r ./fonts/* /usr/share/fonts
+cp ./Xresources ~/.Xresources
