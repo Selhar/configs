@@ -61,11 +61,15 @@ URxvt.saveline: 2048
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
 URxvt*scrollstyle: plain
-URxvt.url-select.launcher:  firefox
-URxvt.url-select.underline: true
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
+URxvt*.transparent: true
+URxvt*.shading: 25
+urxvt.blurRadius: 15
+urxvt.fading: 30
 
 !! Extensions
-URxvt.perl-ext-common:default,clipboard,keyboard-select,url-select,tabbedex
+URxvt.perl-ext-common:default,clipboard,keyboard-select,tabbedex,matcher
 
 !! Key bindings
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
