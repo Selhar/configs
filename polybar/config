@@ -1,0 +1,241 @@
+## Adapted from: https://github.com/moleratgod/config/tree/master/sunset-rice
+[color]
+
+trans = #00000000
+white = #FFFFFF
+black = #000000
+
+bg = #121212
+bg-alt = #3f3f3f
+fg = #e67046
+fg-alt = #ffffff
+
+acolor = #e67046
+curgent = #821f1f
+coccupied = #fff
+cempty = #4f463e
+
+## Material Colors
+
+red = #e53935
+pink = #d81b60
+purple = #8e24aa
+deep-purple = #5e35b1
+indigo = #3949ab
+blue = #1e88e5
+light-blue = #039be5
+cyan = #00acc1
+teal = #00897b
+green = #43a047
+light-green = #7cb342
+lime = #c0ca33
+yellow = #fdd835
+amber = #ffb300
+orange = #fb8c00
+deep-orange = #f4511e
+brown = #6d4c41
+grey = #757575
+blue-gray = #546e7a
+
+## Main bar
+
+[bar/main]
+width = 100%
+height = 35
+offset-x = 10%
+offset-y = 10%
+bottom = true
+fixed-center = false
+line-size = 2
+
+background = ${color.bg}
+foreground = ${color.fg}
+
+border-size = 0
+border-color = #FFFFFF0
+
+module-margin-left = 1
+module-margin-right = 1
+
+## Fonts
+
+font-0 = "Terminus:pixelsize=15;4"
+font-1 = "FontAwesome:size=15;4"
+
+## Basic configuration setup
+
+scroll-up = i3wm-wsprev
+scroll-down = i3wm-wsnext
+
+modules-center = cmus
+modules-left = workspaces
+modules-right = temperature filesystem memory volume date
+
+## Modules
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+format-padding = 2
+
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-default =
+
+format = <label-state>
+label-active = %icon%
+label-occupied = %icon%
+label-urgent = %icon%
+label-empty = %icon%
+
+label-occupied-padding = 2
+label-empty-padding = 2
+label-urgent-padding = 2
+label-active-padding = 2
+
+label-active-foreground = ${color.acolor}
+label-urgent-foreground = ${color.curgent}
+label-empty-foreground = ${color.cempty}
+label-occupied-foreground = ${color.coccupied}
+
+label-active-underline = ${color.acolor}
+label-urgent-underline = ${color.curgent}
+label-occupied-underline = ${color.coccupied}
+
+[module/cmus]
+type = custom/script
+
+exec = ~/.config/polybar/scripts/cmus.sh
+exec-if = pgrep -x cmus
+interval = 1
+
+click-left = cmus-remote --next
+click-right = cmus-remote --prev
+click-middle = cmus-remote --pause
+scroll-up = cmus-remote --volume +5%
+scroll-down = cmus-remote --volume -5%
+
+label-font = 3
+format =    <label>
+label = %output%
+label-maxlen = 50
+
+[module/volume]
+type = custom/script
+tail = true
+label = %output%
+exec = ~/.config/polybar/scripts/volume.sh --listen
+click-right = exec pavucontrol
+click-left = ~/.config/polybar/scripts/volume.sh --togmute
+scroll-up = ~/.config/polybar/scripts/volume.sh --up
+scroll-down = ~/.config/polybar/scripts/volume.sh --down
+format-foreground = ${color.acolor}
+label-padding = 2
+
+[module/memory]
+type = internal/memory
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+
+label =  %gb_used%
+label-background = #212020
+label-padding = 4
+
+[module/temperature]
+type = internal/temperature
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 0.5
+
+; Thermal zone to use
+; To list all the zone types, run
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+; Default: 0
+thermal-zone = 0
+
+; Full path of temperature sysfs path
+; Use `sensors` to find preferred temperature source, then run
+; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
+; to find path to desired file
+; Default reverts to thermal zone setting
+hwmon-path = /sys/devices/pci0000:00/0000:00:03.1/0000:26:00.0/hwmon/hwmon1/temp1_input
+
+; Threshold temperature to display warning label (in degrees celsius)
+; Default: 80
+warn-temperature = 70
+
+; Available tokens:
+;   %temperature% (deprecated)
+;   %temperature-c%   (default, temperature in °C)
+;   %temperature-f%   (temperature in °F)
+label = %temperature-c%
+label-background = #212020
+label-padding = 4
+
+; Available tokens:
+;   %temperature% (deprecated)
+;   %temperature-c%   (default, temperature in °C)
+;   %temperature-f%   (temperature in °F)
+
+label-warn =%temperature-c% |
+label-warn-foreground = #f00
+
+[module/date]
+type = internal/date
+
+; Seconds to sleep between updates
+interval = 1.0
+
+; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = %d-%m-%Y%
+
+; Optional time format
+time = %H:%M
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+format = 🕓 <label>
+format-background = #212020
+label-padding = 4
+label = %date% | %time%
+
+[module/filesystem]
+type = internal/fs
+
+; Mountpoints to display
+mount-0 = /
+mount-1 = /home/selhar/storage
+
+; Seconds to sleep between updates
+; Default: 30
+interval = 10
+
+; Display fixed precision values
+; Default: false
+fixed-values = true
+
+; Spacing between entries
+; Default: 2
+spacing = 4
+
+; Available tags:
+;   <label-mounted> (default)
+;   <bar-free>
+;   <bar-used>
+;   <ramp-capacity>
+format-mounted = <label-mounted>
+format-mounted-padding = 1
+
+label-mounted = %free%
