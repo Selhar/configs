@@ -3,8 +3,8 @@
 ! Tab color
 URxvt.tabbed.tabbar-fg: 2
 URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg: 3
-URxvt.tabbed.tab-bg: 0
+URxvt.tabbed.tab-fg: 	3
+URxvt.tabbed.tab-bg: 	0
 
 ! special
 *.foreground:   #e67046
@@ -45,37 +45,39 @@ URxvt.tabbed.tab-bg: 0
 
 !!! URxvt configuration
 !! Fonts
-URxvt.font: xft:Anonymous Pro:size=14
-URxvt.boldFont: xft:Anonymous Pro:size=14
-URxvt.italicFont: xft:Anonymous Pro:size=14
-URxvt.boldItalicfont: xft:Anonymous Pro:size=14
+URxvt.font: 		xft:Anonymous Pro:size=14
+URxvt.boldFont: 	xft:Anonymous Pro:size=14
+URxvt.italicFont: 	xft:Anonymous Pro:size=14
+URxvt.boldItalicfont: 	xft:Anonymous Pro:size=14
 
 !! Indentation
-URxvt.letterSpace: 0
-URxvt.lineSpace: 0
-URxvt.internalBorder: 0
+URxvt.letterSpace:	0
+URxvt.lineSpace: 	0
+URxvt.internalBorder: 	0
 
 !! Behavior
-URxvt.tabbedex.autohide: false
-URxvt.cursorUnderline: true
-URxvt.saveline: 2048
-URxvt.scrollBar: false
-URxvt.urgentOnBell: true
-URxvt*scrollstyle: plain
-URxvt.url-launcher: firefox
-URxvt.matcher.button: 1
-urxvt*background: rgba:0000/0000/0200/c800
-urxvt*depth: 32
-urxvt.blurRadius: 15
-urxvt.fading: 50
+URxvt.tabbedex.autohide: 	false
+URxvt.cursorUnderline: 		true
+URxvt.saveline: 		2048
+URxvt.scrollBar: 		false
+URxvt.urgentOnBell: 		true
+URxvt*scrollstyle: 		plain
+URxvt.url-launcher: 		firefox
+URxvt.matcher.button: 		1
+URxvt*background: 		rgba:0000/0000/0200/c800
+URxvt*depth: 			32
+URxvt.blurRadius: 		15
+URxvt.fading: 			50
+URxvt.iso14755:			false
+URxvt.iso14755_52:		false
 
 !! Extensions
 URxvt.perl-ext-common:default,clipboard,keyboard-select,tabbedex,matcher
 
 !! Key bindings
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.keysym.Control-t: perl:tabbedex:new_tab
-URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
-URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab
+URxvt.keysym.Shift-Control-C: 			perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: 			perl:clipboard:paste
+URxvt.keysym.Control-t: 			perl:tabbedex:new_tab
+URxvt.keysym.Control-Tab: 			perl:tabbedex:next_tab
+URxvt.keysym.Control-Shift-ISO_Left_Tab: 	perl:tabbedex:prev_tab
 
