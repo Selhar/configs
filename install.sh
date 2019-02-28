@@ -1,7 +1,10 @@
 #!/bin/bash
 
-cp -r ./fonts/* /usr/share/fonts
-cp ./Xresources ~/.Xresources
-cp ./compton.conf /etc/xdg/
-cp ./config ~/.config/i3
-xrdb ~/.Xresources
+if [ ! -d /usr/share/fonts/AnonymousPro ]; then
+  cp -r ./fonts /usr/share/fonts
+fi
+
+cp ./Xresources $HOME/.Xresources
+cp ./compton.conf $HOME/.config/
+cp ./i3.conf $HOME/.config/i3/config
+xrdb $HOME/.Xresources
