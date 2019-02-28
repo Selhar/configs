@@ -30,6 +30,10 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+
+# Custom keybinds
+bindsym $mod+l exec i3lock -f -i ~/Pictures/wallpaper.png -u
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -62,12 +66,6 @@ bindsym $mod+Shift+q kill
 
 # start dmenu
 bindsym $mod+d exec dmenu_run 
-
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ccedilla focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
