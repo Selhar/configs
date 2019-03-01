@@ -64,8 +64,8 @@ font-1 = "FontAwesome:size=15;4"
 
 ## Basic configuration setup
 
-scroll-up = i3wm-wsprev
-scroll-down = i3wm-wsnext
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 
 modules-center = cmus
 modules-left = workspaces
