@@ -11,3 +11,5 @@ cp ./polybar/launch.sh $HOME/.config/polybar/launch.sh
 cp ./polybar/config $HOME/.config/polybar/config
 
 xrdb $HOME/.Xresources
+
+echo 'Successfully installed.'
