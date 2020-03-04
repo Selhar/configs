@@ -8,11 +8,11 @@
 *.color8:       #925d95
 
 ! red
-*.color1:       #c648c6
+*.color1:       #11155e
 *.color9:       #4aaeb1
 
 ! green
-*.color2:       #6A1274
+*.color2:       #6a1274
 *.color10:      #a2c2ff
 
 ! yellow
@@ -20,7 +20,7 @@
 *.color11:      #f0c872
 
 ! blue
-*.color4:       #18228B
+*.color4:       #18228b
 *.color12:      #e66e0a
 
 ! magenta
@@ -34,6 +34,7 @@
 ! white
 *.color7:       #c166bc
 *.color15:      #aa49ef
+
 
 
 !!! URxvt configuration
