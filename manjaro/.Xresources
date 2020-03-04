@@ -8,7 +8,7 @@
 *.color8:       #925d95
 
 ! red
-*.color1:       #11155e
+*.color1:       #6A1274
 *.color9:       #4aaeb1
 
 ! green
@@ -72,3 +72,4 @@ URxvt.keysym.Shift-Control-V: 			perl:clipboard:paste
 URxvt.keysym.Control-t: 			perl:tabbedex:new_tab
 URxvt.keysym.Control-Tab: 			perl:tabbedex:next_tab
 URxvt.keysym.Control-Shift-ISO_Left_Tab: 	perl:tabbedex:prev_tab
+
