@@ -1,0 +1,27 @@
+[global_config]
+  always_split_with_profile = True
+  title_font = Anonymous Pro 18
+  title_inactive_bg_color = "#925d95"
+  title_inactive_fg_color = "#aa49ef"
+  title_transmit_bg_color = "#282a2e"
+  title_transmit_fg_color = "#aa49ef"
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    font = Anonymous Pro 20
+    use_system_font = False
+    background_color = "#0a090a"
+    cursor_color = "#aa49ef"
+    foreground_color = "#aa49ef"
+    palette = "#282a2e:#6a1274:#6a1274:#88377b:#18228b:#b85cc4:#c886a9:#c166bc:#925d95:#4aaeb1:#a2c2ff:#f0c872:#e66e0a:#b6bb21:#5ecdcc:#aa49ef"
