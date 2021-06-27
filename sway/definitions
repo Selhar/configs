@@ -10,7 +10,7 @@ set $up k
 set $right l
 
 # background
-set $background ~/Documents/System/wallpaper.jpg 
+set $background /home/$USER/Documents/System/wallpaper.jpg 
 
 # styles - matcha-green or matcha-blue
 set $theme /usr/share/sway/themes/matcha-green

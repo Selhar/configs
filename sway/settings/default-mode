@@ -117,5 +117,4 @@ bindsym $mod+a focus parent
 ## Launch // Help ##
 bindsym $mod+question exec $help
 
-default_border pixel 1
-hide_edge_borders smart
+default_border none

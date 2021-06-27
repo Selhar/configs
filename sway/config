@@ -6,13 +6,7 @@
 
 # global variables
 include ./definitions
-
-include ./default-keyboard
-include /etc/sway/inputs/default-touchpad
-include /etc/sway/outputs/default-screen
-
-# enable modes
-include /etc/sway/modes/*
+include ./settings/*
 
 # only enable this if every app you use is compatible with wayland
 # xwayland disable

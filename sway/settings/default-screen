@@ -9,5 +9,7 @@
 # import theme
 include $theme/definitions
 
-Output DP-1 resolution 2560x1440@143.912Hz
+# Default output
+output * bg $background fill
+output DP-1 resolution 2560x1440@143.912Hz
 
