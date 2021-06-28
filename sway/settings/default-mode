@@ -62,30 +62,54 @@ bindsym $mod+Shift+Right move right
 #
 # Workspaces:
 #
+
+# Workspace variables
+set $ws1 "1:☭"
+set $ws2 "2:λ"
+set $ws3 "3:龎"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
 ## Navigation // Switch workspace // $mod + [number] ##
-bindsym $mod+1 workspace number 1
-bindsym $mod+2 workspace number 2
-bindsym $mod+3 workspace number 3
-bindsym $mod+4 workspace number 4
-bindsym $mod+5 workspace number 5
-bindsym $mod+6 workspace number 6
-bindsym $mod+7 workspace number 7
-bindsym $mod+8 workspace number 8
-bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 10
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
 ## Action // Move focussed window to workspace // $mod + Shift + [number] ##
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
-# Note: workspaces can have any name you want, not just numbers.
-# We just use 1-10 as the default.
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+
+# workspace assignments
+assign [app_id="firefox"] $ws1
+assign [app_id="telegramdesktop"] $ws1
+assign [class="Slack"] $ws2
+assign [class="code-oss"] $ws2
+assign [app_id="calibre-gui"] $ws3
+assign [app_id="quiterss"] $ws3
+assign [app_id="keepassxc"] $ws3
+assign [class="Steam"] $ws4
+assign [app_id="org.kde.ktorrent"] $ws5
 
 #
 # Layout stuff:
@@ -109,7 +133,7 @@ bindsym $mod+f fullscreen
 bindsym $mod+Shift+space floating toggle
 
 ## Navigation // Swap focus between the tiling area and the floating area ##
-bindsym $mod+space focus mode_toggle
+bindsym $mod+sace focus mode_toggle
 
 ## Navigation // Swap focus to the parent window ##
 bindsym $mod+a focus parent
@@ -119,3 +143,4 @@ bindsym $mod+question exec $help
 
 default_border none
 workspace_layout tabbed
+p
