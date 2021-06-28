@@ -12,7 +12,8 @@ include ./settings/*
 # xwayland disable
 
 # include additional configs e.g. to autostart applications
-include /etc/sway/config.d/*
+include ./config.d/*
 
 # user config
 include $HOME/.config/sway/config.d/*
+

@@ -118,3 +118,4 @@ bindsym $mod+a focus parent
 bindsym $mod+question exec $help
 
 default_border none
+workspace_layout tabbed

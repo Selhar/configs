@@ -16,10 +16,8 @@ set $background /home/$USER/Documents/System/wallpaper.jpg
 set $theme /usr/share/sway/themes/matcha-green
 
 # Your preferred terminal emulator
-set $term /usr/bin/kitty
-set $term_float $term float
-set $term_float_portrait $term float_portrait
-
+set $term kitty
+set $term_float /usr/share/sway/scripts/terminal.sh float
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
