@@ -1,0 +1,51 @@
+use std::env;
+use std::path::PathBuf;
+use std::fs;
+
+#[derive(Debug)]
+struct Pathing {
+    origin: PathBuf,
+    destination: PathBuf,
+}
+
+
+fn main() {
+    let user = match env::var("USER") {
+        Ok(i) => i,
+        Err(_) => panic!("Couldn't retrieve $USER environment variable"),
+    };
+    
+    let pathing_list: [Pathing; 2] = [
+        get_pathing("polybar.conf", &format!("/home/{}/.config/polybar/config_test", user)),
+        get_pathing("nvim.conf", "/.config/nvim_test"),
+    ];
+
+    install_config_files(&pathing_list);
+}
+
+fn install_config_files(pathings: &[Pathing]) {
+    for (_, item) in pathings.into_iter().enumerate() {
+        println!("Creating {}@{}", item.origin.display(), item.destination.display());
+        match fs::create_dir_all(&item.destination){
+            Err(_) => panic!("Failed to create destination folders. Likely due to a lack of permission"),
+            _ => (),
+        };
+        match fs::copy(&item.origin, &item.destination) {
+            Err(_) => panic!("Failed to copy files. Likely due to a lack of permission"),
+            _ => (),
+        };
+    }
+}
+
+fn get_pathing(file: &str, destination: &str) -> Pathing {
+    let mut folder = match env::current_dir() {
+        Ok(i) => i,
+        Err(_) => panic!("Could not find current directory. You might need permissions or folder is unavailable"),
+    };
+    folder.push(file);
+    
+    Pathing {
+        origin: folder,
+        destination: PathBuf::from(destination), 
+    }
+}
