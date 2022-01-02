@@ -17,10 +17,12 @@ fn main() {
         Err(_) => panic!("Couldn't retrieve $USER environment variable"),
     };
     
-    let pathing_list: [Pathing; 3] = [
+    let pathing_list: [Pathing; 4] = [
         get_pathing("polybar.conf", &format!("/home/{}/.config/polybar/", user), String::from("config")),
         get_pathing("nvim.conf",  &format!("/home/{}/.config/nvim/", user), String::from("init.vim")),
         get_pathing("kitty.conf",  &format!("/home/{}/.config/kitty/", user), String::from("kitty.conf")),
+        get_pathing("i3.conf",  &format!("/home/{}/.config/i3/", user), String::from("config")),
+
     ];
 
     install_config_files(&pathing_list);
