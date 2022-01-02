@@ -1,4 +1,6 @@
 Missing:
+- Polybar plugin for available hard drive size
+- Transparent background on terminal
 - i3gaps setup
 - script to install all required packages (deluge, steam, etc)
 - wallpaper
